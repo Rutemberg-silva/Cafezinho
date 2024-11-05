@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Usuários - Admin</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/cafe.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1 id="logo">CAFEZINHO</h1>
+        <div class="right-menu">
+            <span id="welcomeMessage">Bem-vindo, admin</span>
+            <a href="main.html" class="small-btn">Voltar para a Página Inicial</a>
+            <button id="logoutBtn" class="small-btn" style="display:none;">Logout</button>
+        </div>
+    </header>
+
+    <main>
+        <h2>Gerenciamento de Usuários</h2>
+
+        <!-- Tabela de usuários -->
+        <table id="userTable" border="1">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Endereço</th>
+                    <th>Telefone</th>
+                    <th>Tipo de Usuário</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os dados dos usuários serão carregados aqui -->
+            </tbody>
+        </table>
+
+        <!-- Paginação -->
+        <div id="pagination">
+            <button id="prevPage" disabled>Anterior</button>
+            <span id="pageNumber">1</span>
+            <button id="nextPage">Próxima</button>
+        </div>
+
+        <!-- Modal para editar usuário -->
+        <div id="editUserModal" style="display: none;">
+            <h3>Editar Usuário</h3>
+            <form id="editUserForm">
+                <label for="editNome">Nome:</label>
+                <input type="text" id="editNome" name="nome" required><br>
+
+                <label for="editEmail">Email:</label>
+                <input type="email" id="editEmail" name="email" required><br>
+
+                <label for="editTipo">Tipo de Usuário:</label>
+                <select id="editTipo" name="tipo_usuario">
+                    <option value="cliente">Cliente</option>
+                    <option value="admin">Admin</option>
+                </select><br>
+
+                <label for="editEndereco">Endereço:</label>
+                <input type="text" id="editEndereco" name="endereco" required><br> <!-- Novo campo -->
+
+                <label for="editTelefone">Telefone:</label>
+                <input type="text" id="editTelefone" name="telefone" required><br> <!-- Novo campo -->
+
+                <button type="submit">Salvar</button>
+                <button type="button" id="cancelEdit">Cancelar</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/perfil.js"></script>
+</body>
+</html>

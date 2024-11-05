@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafezinho - Loja de Café Gourmet</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/cafe.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1 id="logo">CAFEZINHO</h1>
+        <div class="right-menu">
+            <span id="welcomeMessage" style="display: none;"></span> <!-- Mensagem de boas-vindas -->
+            <button class="small-btn" id="loginBtn">Login</button>
+            <button class="small-btn" id="createAccountBtn">Criar Conta</button>
+            <button class="icon-btn" id="cartBtn">🛒</button> <!-- Carrinho de compras -->
+            <button class="small-btn" id="logoutBtn" style="display: none;">Sair</button> <!-- Botão de Sair -->
+        </div>
+
+        <nav>
+            <ul class="menu-bar">
+                <li><a href="nossos_produtos.html">Nossos Produtos</a></li>
+                <li><a href="avaliacoes.html">Interatividade Social e Avaliações</a></li>
+                <li><a href="lista_desejos.html" id="listaDesejos">Lista Desejos</a></li>
+                <li><a href="suporte.html">Ajuda</a></li>
+                <li><a href="meus_pedidos.html" id="meusPedidos" style="display: none;">Meus Pedidos</a></li>
+                <li><a href="perfil.html" id="manageUsers" style="display: none;">Gerenciar Usuários</a></li>
+                <li><a href="cadastro_produtos.html" id="manageProducts" style="display: none;">Gerenciar Produtos</a></li>
+            </ul>
+        </nav>
+
+        <div class="search-bar">
+            <form action="find.php" method="get">
+                <input type="text" name="search" placeholder="Digite o nome do produto"> <!-- Atualização do placeholder -->
+                <button id="srcBtn" type="submit">Pesquisar</button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <section class="product-carousel">
+            <div class="product-frame" id="productFrame">
+                <!-- Os produtos serão inseridos aqui dinamicamente -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Produzido por Rutemberg Cardoso | Projeto Curricular | Ciências da Computação - 8º período</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos - Cafezinho</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/cafe.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1 id="logo">CAFEZINHO</h1>
+        <div class="right-menu">
+            <button class="small-btn" id="homeBtn">Home</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="welcomeMessage"></div>
+        <section id="formSection">
+            <h2>Cadastro de Produtos</h2>
+            <form id="productForm" enctype="multipart/form-data">
+                <label for="productName">Nome:</label>
+                <input type="text" id="productName" name="nome" required>
+                
+                <label for="productPrice">Preço:</label>
+                <input type="text" id="productPrice" name="preco" required>
+                
+                <label for="productDescription">Descrição:</label>
+                <textarea id="productDescription" name="descricao" required></textarea>
+                
+                <label for="productSuggestions">Sugestões:</label>
+                <textarea id="productSuggestions" name="sugestoes"></textarea>
+                
+                <label for="productImage">Imagem:</label>
+                <input type="file" id="productImage" name="imagem" accept="image/*">
+                
+                <button type="submit">Salvar</button>
+            </form>
+        </section>
+
+        <section id="productListSection">
+            <h2>Produtos Cadastrados</h2>
+            <div class="product-list"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Cafezinho 2023</p>
+    </footer>
+
+    <script src="js/cadastro_produtos.js"></script>
+</body>
+</html>

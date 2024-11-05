@@ -1,0 +1,14 @@
+UserId: 2, Status: pendente
+Nenhum pedido encontrado para o usuário 2 com status pendente
+UserId: 2, Status: concluido
+Nenhum pedido encontrado para o usuário 2 com status concluido
+UserId: 2, Status: pendente
+Nenhum pedido encontrado para o usuário 2 com status pendente
+UserId: 2, Status: pendente
+Nenhum pedido encontrado para o usuário 2 com status pendente
+UserId: 2, Status: pendente
+Nenhum pedido encontrado para o usuário 2 com status pendente
+UserId: 2, Status: pendente
+Nenhum pedido encontrado para o usuário 2 com status pendente
+UserId: 2, Status: pendente
+Nenhum pedido encontrado para o usuário 2 com status pendente

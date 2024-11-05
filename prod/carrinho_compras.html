@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras - Cafezinho</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/cafe.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1 id="logo">CAFEZINHO</h1>
+        <div class="right-menu">
+            <button class="small-btn" id="homeBtn">Home</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="welcomeMessage"></div>
+        <h2>Meu Carrinho</h2>
+        <div class="cart" id="cartItems">
+            <!-- Itens do carrinho serão carregados aqui -->
+        </div>
+        <button id="payBtn" disabled>Pagar</button>
+        <button id="removeBtn">Remover Selecionados</button>
+
+        <div id="paymentOptions" style="display:none;">
+            <h3>Escolha a forma de entrega:</h3>
+            <select id="deliveryOption">
+                <option value="loja">Retirar na Loja</option>
+                <option value="delivery">Delivery</option>
+            </select>
+
+            <div id="deliveryAddress" style="display:none;">
+                <h4>Endereço de Entrega:</h4>
+                <p>Endereço cadastrado: Rua Exemplo, 123</p>
+            </div>
+
+            <h3>Forma de Pagamento</h3>
+            <select id="paymentMethod">
+                <option value="debito">Débito</option>
+                <option value="credito">Crédito</option>
+                <option value="pix">Pix</option>
+            </select>
+
+            <p id="totalPrice">Total: R$ 0,00</p>
+            <button id="finalizeBtn">Finalizar Compra</button>
+            <button id="cancelBtn">Cancelar</button>
+        </div>
+    </main>
+
+    <script src="js/carrinho_compras.js"></script>
+</body>
+</html>

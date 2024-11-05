@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafezinho - Loja de Café Gourmet</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/cafe.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1 id="logo">CAFEZINHO</h1>
+        <div class="right-menu">
+            <span id="welcomeMessage" style="display: none;"></span> <!-- Mensagem de boas-vindas -->
+            <button class="small-btn" id="loginBtn">Login</button>
+            <button class="small-btn" id="createAccountBtn">Criar Conta</button>
+            <button class="icon-btn" id="cartBtn">🛒</button> <!-- Carrinho de compras -->
+            <button class="small-btn" id="logoutBtn" style="display: none;">Sair</button> <!-- Botão de Sair -->
+        </div>
+
+        <nav>
+            <ul class="menu-bar">
+                <li><a href="nossos_produtos.html">Nossos Produtos</a></li>
+                <li><a href="avaliacoes.html">Interatividade Social e Avaliações</a></li>
+                <li><a href="lista_desejos.html" id="listaDesejos">Lista Desejos</a></li>
+                <li><a href="suporte.html">Ajuda</a></li>
+                <li><a href="meus_pedidos.html" id="meusPedidos" style="display: none;">Meus Pedidos</a></li> <!-- Link para Meus Pedidos -->
+                <li><a href="perfil.html" id="manageUsers" style="display: none;">Gerenciar Usuários</a></li> <!-- Apenas para admin -->
+                <li><a href="cadastro_produtos.html" id="manageProducts" style="display: none;">Gerenciar Produtos</a></li> <!-- Apenas para admin -->
+            </ul>
+        </nav>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar produtos...">
+            <button>Pesquisar</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="welcomeMessage"></div>
+        <section class="product-carousel">
+            <div class="product-frame">
+                <div class="product">
+                    <img src="img/produto1.jpg" alt="Produto 1">
+                    <p>Café Gourmet 1</p>
+                </div>
+                <div class="product">
+                    <img src="img/produto2.jpg" alt="Produto 2">
+                    <p>Café Gourmet 2</p>
+                </div>
+                <div class="product">
+                    <img src="img/produto3.jpg" alt="Produto 3">
+                    <p>Café Gourmet 3</p>
+                </div>
+                <div class="product">
+                    <img src="img/produto4.jpg" alt="Produto 4">
+                    <p>Café Gourmet 4</p>
+                </div>
+                <div class="product">
+                    <img src="img/produto5.jpg" alt="Produto 5">
+                    <p>Café Gourmet 5</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

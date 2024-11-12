@@ -24,7 +24,7 @@ if (isset($_POST['nome'], $_POST['preco'], $_POST['descricao'], $_POST['sugestoe
     if (move_uploaded_file($imagem['tmp_name'], $imagemPath)) {
         // Insere o produto no banco de dados
         $stmt = $conn->prepare("INSERT INTO produtos (nome, preco, descricao, sugestoes, imagem, data_cadastro) VALUES (?, ?, ?, ?, ?, NOW())");
-        $stmt->bind_param("sdsss", $nome, $preco, $descricao, $sugestoes, $imagemPath); // Adiciona o parâmetro para sugestões
+        $stmt->bind_param("sdsss", $nome, $preco, $descricao, $sugestoes, $imagemPath); 
 
         // Verifica se a execução foi bem-sucedida
         if ($stmt->execute()) {

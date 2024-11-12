@@ -1,4 +1,3 @@
-// meus_pedidos.js
 let isLoggedIn = false;
 let isAdmin = false;
 let userId = null;

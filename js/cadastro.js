@@ -32,7 +32,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
 
     // Envia os dados para o backend usando XMLHttpRequest
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'register_user.php', true); // Chama o script PHP
+    xhr.open('POST', 'register_user.php', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     
     xhr.onload = function() {

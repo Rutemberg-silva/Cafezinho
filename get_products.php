@@ -22,7 +22,7 @@ if ($result->num_rows > 0) {
             'preco' => $row['preco'],
             'descricao' => $row['descricao'],
             'imagem' => $row['imagem'],
-            'sugestoes' => $row['sugestoes'] // Incluindo o campo de sugestões
+            'sugestoes' => $row['sugestoes'] 
         ];
     }
     echo json_encode(['success' => true, 'products' => $products]);

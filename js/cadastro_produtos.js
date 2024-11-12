@@ -28,7 +28,7 @@ function loadProducts() {
                 const response = JSON.parse(xhr.responseText);
                 if (response.success) {
                     products = response.products;
-                    console.log("Produtos carregados:", products); // Exibe os produtos carregados no console
+                    console.log("Produtos carregados:", products); 
                     displayProducts(products);
                 } else {
                     console.error("Erro: A resposta não foi bem-sucedida.");
@@ -46,7 +46,7 @@ function loadProducts() {
 // Função para exibir produtos na lista
 function displayProducts(products) {
     const productContainer = document.querySelector(".product-list");
-    productContainer.innerHTML = ""; // Limpa a lista de produtos
+    productContainer.innerHTML = ""; 
 
     products.forEach(product => {
         const preco = parseFloat(product.preco); // Converte para número

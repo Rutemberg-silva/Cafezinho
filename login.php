@@ -18,8 +18,8 @@ $result = $stmt->get_result();
 if ($result->num_rows > 0) {
     $user = $result->fetch_assoc();
     
-    // Depuração: Veja o que está retornando do banco de dados
-    var_dump($user); // Adicione esta linha para ver os dados do usuário
+    // Depuração: 
+    var_dump($user); 
     // Verifica se a senha fornecida corresponde à senha armazenada (hash)
     if (password_verify($password, $user['senha'])) {
         // Configura as variáveis de sessão

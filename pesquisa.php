@@ -1,5 +1,5 @@
 <?php
-session_start(); // Inicia a sessão para acessar o usuario_id
+session_start(); 
 
 require 'db_connect.php';
 

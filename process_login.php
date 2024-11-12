@@ -2,13 +2,13 @@
 session_start(); // Inicia a sessão
 
 // Inclui o arquivo de conexão
-include 'db_connect.php'; // Certifique-se de que esse arquivo existe e está no mesmo diretório
+include 'db_connect.php';
 
 // Define o tipo de resposta como JSON
 header('Content-Type: application/json');
 
 // Obtém os dados do formulário de login
-$username = $_POST['username'] ?? ''; // Pode ser nome ou email
+$username = $_POST['username'] ?? '';
 $password = $_POST['password'] ?? '';
 
 // Prepara a consulta SQL

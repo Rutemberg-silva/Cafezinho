@@ -4,7 +4,7 @@ session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $usuario_id = $_SESSION['user_id'];
-    $produtos = $_POST['produtos']; // Recebe os produtos como um array de IDs e quantidades
+    $produtos = $_POST['produtos']; 
     $total = $_POST['total'];
 
     // Inicia a transação

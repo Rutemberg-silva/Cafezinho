@@ -38,7 +38,7 @@ function init() {
 
 // Função para abrir o modal de edição de usuário
 function openEditUserModal(userId) {
-    const user = users.find(u => u.id == userId); // Verifique a igualdade com '=='
+    const user = users.find(u => u.id == userId); 
 
     if (user) {
         const editUserModal = document.getElementById('editUserModal');

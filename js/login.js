@@ -17,9 +17,8 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     // Definir o que acontece ao carregar a resposta
     xhr.onload = function() {
         if (xhr.status === 200) {
-            console.log(xhr.responseText); // Loga a resposta no console para debugging
+            console.log(xhr.responseText); 
             try {
-                // Tenta fazer o parsing da resposta JSON
                 const response = JSON.parse(xhr.responseText);
 
                 // Verifica se o login foi bem-sucedido
@@ -31,7 +30,6 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
                     alert('Erro de login: ' + response.message);
                 }
             } catch (error) {
-                // Caso ocorra um erro ao fazer o parsing do JSON
                 console.error("Erro ao fazer o parsing do JSON: " + error);
             }
         } else {

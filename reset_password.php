@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Captura o ID do usuário enviado pelo JavaScript
     $userId = $_POST['id'];
 
-    // Gera a nova senha (pode ser uma lógica mais robusta)
+    // Gera a nova senha 
     $newPassword = password_hash('cafezinho123', PASSWORD_DEFAULT);
     
     // Prepara a consulta para atualizar a senha no banco de dados

@@ -34,10 +34,23 @@ foreach ($selectedItems as $itemId) {
     }
 }
 
+// Busque o endereço do usuário
+$query = "SELECT endereco FROM usuarios WHERE id = ?";
+$stmt = $conn->prepare($query);
+$stmt->bind_param('i', $userId);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($row = $result->fetch_assoc()) {
+    $enderecoEntrega = $row['endereco'];
+} else {
+    echo json_encode(['success' => false, 'message' => 'Endereço não encontrado.']);
+    exit;
+}
+
 // Insere o pedido na tabela pedidos
 $query = "INSERT INTO pedidos (usuario_id, total, metodo_pagamento, endereco_entrega, status, data_pedido) VALUES (?, ?, ?, ?, 'pendente', NOW())";
 $stmt = $conn->prepare($query);
-$enderecoEntrega = "Endereço cadastrado: Rua Exemplo, 123"; // Aqui você pode pegar o endereço do banco de dados
 $stmt->bind_param('idss', $userId, $total, $paymentMethod, $enderecoEntrega);
 $stmt->execute();
 

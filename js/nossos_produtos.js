@@ -33,17 +33,26 @@ function updateUI() {
     const loginBtn = document.getElementById('loginBtn');
     const addToCartBtn = document.getElementById('addToCartBtn');
     const addToWishlistBtn = document.getElementById('addToWishlistBtn');
+    const cartBtn = document.getElementById('cartBtn');
 
     if (isLoggedIn) {
         welcomeMessage.textContent = `Seja bem-vindo, ${userName}!`;
         welcomeMessage.style.display = 'block';
         loginBtn.style.display = 'none';
+        cartBtn.style.display = 'inline';
     } else {
         welcomeMessage.style.display = 'none';
         loginBtn.style.display = 'inline-block';
         addToCartBtn.style.display = 'none';
         addToWishlistBtn.style.display = 'none';
+        cartBtn.style.display = 'none';
     }
+}
+
+if (cartBtn) {
+    cartBtn.addEventListener('click', function() {
+        window.location.href = 'carrinho_compras.html';
+    });
 }
 
 // Redirecionamento para login

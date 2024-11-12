@@ -1,12 +1,13 @@
 <?php
-$host = 'localhost';
-$user = 'root';
-$pass = ''; // Deixe em branco para a configuração padrão do XAMPP
-$db = 'cafezinho';
+$host = "localhost";
+$database = "u158450547_cafezinhodb"; // Certifique-se de que este é o nome correto do banco de dados
+$username = "u158450547_admin";       // Substitua pelo nome de usuário correto
+$password = "Senhaadministrador123";   // Substitua pela senha correta
 
-$conn = new mysqli($host, $user, $pass, $db);
+// Criando a conexão
+$conn = new mysqli($host, $username, $password, $database);
 
-// Verificar se a conexão falhou
+// Verificando a conexão
 if ($conn->connect_error) {
     die("Conexão falhou: " . $conn->connect_error);
 }

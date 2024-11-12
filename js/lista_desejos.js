@@ -13,12 +13,14 @@ if (homeBtn) {
 // Função para verificar o estado de login
 function checkLogin() {
     const welcomeMessage = document.getElementById('welcomeMessage');
-
+    const cartBtn = document.getElementById('cartBtn');
     if (isLoggedIn) {
+        cartBtn.style.display = 'inline';
         welcomeMessage.textContent = `Seja bem-vindo, ${userName}!`;
         welcomeMessage.style.display = 'block';
     } else {
         welcomeMessage.style.display = 'none';
+        cartBtn.style.display = 'none';
     }
 }
 
@@ -42,6 +44,12 @@ function init() {
         }
     };
     xhr.send();
+}
+
+if (cartBtn) {
+    cartBtn.addEventListener('click', function() {
+        window.location.href = 'carrinho_compras.html';
+    });
 }
 
 // Função para carregar a lista de desejos
